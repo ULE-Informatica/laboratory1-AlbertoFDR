@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
     strncpy(array4, array3, strlen(array3));
     
     array5 [0] = 'M';
-    ptr_char [0] = 'N';
+    //ptr_char [0] = 'N';
     
     array3[sizeof(array3)-1]='\0';
     

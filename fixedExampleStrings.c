@@ -26,14 +26,14 @@ World \
 )foo";
 const char* s2 = "\nHello\nWorld\n";
 
-//void gets_example_func(void) {
-//  char buf[BUFFER_MAX_SIZE];
-// 
-//  if (fgets(buf, sizeof(buf), stdin) == NULL) {
-//        return 1; Is a void function
-//  }
-//  buf[strlen(buf) - 1] = '\0';
-//}
+void gets_example_func(void) {
+  char buf[BUFFER_MAX_SIZE];
+ 
+  if (fgets(buf, sizeof(buf), stdin) == NULL) {
+        //return 1; Is a void function
+  }
+  buf[strlen(buf) - 1] = '\0';
+}
 
 void get_dirname(void) {
   //char *slash;

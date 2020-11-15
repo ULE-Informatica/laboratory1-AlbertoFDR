@@ -67,6 +67,14 @@ strncpy(array3, array5, sizeof(array3)); // Línea 97
 array3[sizeof(array3)-1]='\0'; // Línea 103 - En este caso el sizeof recibe un String que no contiene el null terminator.
 ```
 
+- ARR02-C: Explicitly specify array bounds, even if implicitly defined by an initializer. [Link to this rule/recommendation in CMU wiki](https://wiki.sei.cmu.edu/confluence/display/c/ARR02-C.+Explicitly+specify+array+bounds%2C+even+if+implicitly+defined+by+an+initializer)
+```c
+// Código que lo incumple (Aunque pueden entrar en excepciones):
+char array2[] = { 'F', 'o', 'o', 'b', 'a', 'r', '\0' }; // Línea 19 - STR11-C-EX1.
+char analitic2[size_array2]="аналитик"; // Línea 72 - STR11-C-EX2
+char analitic3[100]="аналитик"; // Línea 73 - STR11-C-EX2
+```
+
 ### Arreglar cualquier tipo de error. Añadir un comentario explicando como resolverlo.
 * gets_example_func -> Devuelve un 1 siendo una función void. Además de ser una función que no se usa por lo tanto la comento (por no borrarla).
 * get_y_or_n -> Cambiamos el gets por fgets.  
